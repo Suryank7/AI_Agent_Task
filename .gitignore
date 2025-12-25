@@ -1,0 +1,30 @@
+# Dependencies
+node_modules/
+.pnp
+.pnp.js
+
+# Testing
+coverage/
+
+# Production
+dist/
+build/
+
+# Misc
+.DS_Store
+.env
+.npm
+*.log
+
+# Editor directories and files
+.idea
+.vscode
+*.swp
+*.swo
+
+# Brain Logic (if you want to exclude agent artifacts, or include them if you want to share)
+# .gemini/ 
+
+# Demo Files
+demo.txt
+demo_output.txt

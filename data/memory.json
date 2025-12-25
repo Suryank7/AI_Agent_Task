@@ -1,0 +1,38 @@
+[
+  {
+    "id": "mdduy3ezshm",
+    "vendorName": "Supplier GmbH",
+    "type": "vendor",
+    "pattern": "Leistungsdatum",
+    "action": "extract_date",
+    "value": "serviceDate",
+    "confidence": 1,
+    "usageCount": 1,
+    "lastUsed": "2025-12-25T10:41:10.579Z",
+    "explanation": "User manually extracted service date from 'Leistungsdatum'"
+  },
+  {
+    "id": "mlupritpunn",
+    "vendorName": "Parts AG",
+    "type": "correction",
+    "pattern": "tax_inclusive",
+    "action": "adjust_tax",
+    "value": "true",
+    "confidence": 1,
+    "usageCount": 1,
+    "lastUsed": "2025-12-25T10:41:10.615Z",
+    "explanation": "User indicated tax inclusive logic."
+  },
+  {
+    "id": "26k8y0pg56u",
+    "vendorName": "Freight & Co",
+    "type": "vendor",
+    "pattern": "Seefracht/Shipping",
+    "action": "sku_map",
+    "value": "FREIGHT-SKU-001",
+    "confidence": 0.9,
+    "usageCount": 3,
+    "lastUsed": "2025-12-25T10:41:10.627Z",
+    "explanation": "Mapped 'Seefracht/Shipping' to SKU FREIGHT-SKU-001 [Decayed]"
+  }
+]

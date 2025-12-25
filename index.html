@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Memory Layer Demo</title>
+    <style>
+        body { font-family: 'Inter', sans-serif; padding: 20px; max-width: 1000px; margin: 0 auto; background: #f9fafb; }
+        h1 { color: #111827; }
+        .container { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
+        .card { background: white; padding: 15px; border-radius: 8px; box-shadow: 0 1px 3px rgba(0,0,0,0.1); }
+        .btn { padding: 8px 16px; background: #2563eb; color: white; border: none; border-radius: 4px; cursor: pointer; margin-right: 5px; }
+        .btn:hover { background: #1d4ed8; }
+        .btn-green { background: #10b981; }
+        .btn-green:hover { background: #059669; }
+        .output { background: #1f2937; color: #e5e7eb; padding: 10px; border-radius: 4px; font-family: monospace; white-space: pre-wrap; height: 300px; overflow-y: auto; }
+        table { width: 100%; border-collapse: collapse; margin-top: 10px; }
+        th, td { text-align: left; padding: 8px; border-bottom: 1px solid #e5e7eb; }
+        th { background: #f3f4f6; }
+        .status-badge { padding: 2px 6px; border-radius: 99px; font-size: 0.8em; }
+        .status-review { background: #fef3c7; color: #d97706; }
+        .status-ok { background: #d1fae5; color: #047857; }
+    </style>
+</head>
+<body>
+    <h1>Memory Layer Demo</h1>
+    
+    <div class="card" style="margin-bottom: 20px;">
+        <h3>Known Memory Rules (LocalStorage)</h3>
+        <button id="clearMemories" class="btn">Clear Memory</button>
+        <div id="memoryTableContainer"></div>
+    </div>
+
+    <div class="container">
+        <div class="card">
+            <h3>Invoice Simulator</h3>
+            <p>Select a scenario to run:</p>
+            <button id="runScenario1" class="btn">1. Supplier GmbH (New)</button>
+            <button id="runScenario2" class="btn">2. Supplier GmbH (Learned)</button>
+            <br><br>
+            <button id="runScenario3" class="btn">3. Parts AG (Tax)</button>
+            <button id="runScenario4" class="btn">4. Freight & Co (SKU)</button>
+            <hr>
+            <h4>Manual Actions</h4>
+            <button id="correctInvoice" class="btn btn-green">Simulate User Correction</button>
+        </div>
+        
+        <div class="card">
+            <h3>System Output</h3>
+            <div id="output" class="output">Select a scenario...</div>
+        </div>
+    </div>
+
+    <script type="module" src="/src/web_app.ts"></script>
+</body>
+</html>
